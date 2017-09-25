@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>CALQL8R</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" integrity="sha384-HzUaiJdCTIY/RL2vDPRGdEQHHahjzwoJJzGUkYjHVzTwXFQ2QN/nVgX7tzoMW3Ov" crossorigin="anonymous"/>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <h1 class="jumbotron">CAL-Q-L8-R</h1>
+    </div>
+
+
+    <div class="form-inline well">
+        <form action="/" method="POST">
+            <input class="form-control" type="text" name="firstNum" placeholder="Enter first number"/>
+
+            <select name="operator"  id="">
+                <option value="">Choose operation</option>
+                <option value="+"> + </option>
+                <option value="-"> - </option>
+                <option value="/"> / </option>
+                <option value="*"> x </option>
+            </select>
+
+            <input class="form-control" type="text" name="secondNum" placeholder="Enter second number"/>
+            <input class="btn btn-dark" type="submit" value="Calculate"/>
+
+            <div class="card well">
+                <div class="card-body">
+                <p th:text="${showCalc}"></p>
+                <p th:text="${showResult}"></p>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
